@@ -30,7 +30,7 @@ const AddBikeForm = () => {
 
     try {
       const res = await axios.post(
-        'http://localhost:5000/api/admin/bikes',
+        'https://brbs.onrender.com/api/admin/bikes',
         formData,
         {
           headers: {

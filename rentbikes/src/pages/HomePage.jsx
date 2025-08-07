@@ -28,7 +28,7 @@ const HomePage = () => {
   const fetchAllBikes = async () => {
     setLoading(true);
     try {
-      const response = await axios.get('http://localhost:5000/api/bikes');
+      const response = await axios.get('https://brbs.onrender.com/api/bikes');
       setBikes(response.data);
       setActiveFilter('All Bikes');
       setFromDate('');
@@ -44,7 +44,7 @@ const HomePage = () => {
   const fetchBikesByType = async (type) => {
     setLoading(true);
     try {
-      const response = await axios.get('http://localhost:5000/api/bikes', {
+      const response = await axios.get('https://brbs.onrender.com/api/bikes', {
         params: {
           type: type
         }
@@ -83,7 +83,7 @@ const HomePage = () => {
     setDateWarning('');
     setLoading(true);
     try {
-      const response = await axios.get('http://localhost:5000/api/bikes', {
+      const response = await axios.get('https://brbs.onrender.com/api/bikes', {
         params: {
           fromDate,
           toDate

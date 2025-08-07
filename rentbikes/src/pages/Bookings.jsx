@@ -36,7 +36,7 @@ const Bookings = () => {
             Authorization: `Bearer ${user.token}`,
           },
         };
-        const response = await axios.get('http://localhost:5000/api/bookings', config);
+        const response = await axios.get('https://brbs.onrender.com/api/bookings', config);
         setBookings(response.data.data);
         setLoading(false);
       } catch (err) {

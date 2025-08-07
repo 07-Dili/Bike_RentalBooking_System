@@ -22,7 +22,7 @@ const RegisterPage = () => {
     setLoading(true);
 
     try {
-      await axios.post('http://localhost:5000/api/auth/register', { username, email, password });
+      await axios.post('https://brbs.onrender.com/api/auth/register', { username, email, password });
 
       showToast('Registration successful! You can now log in.', 'success');
 

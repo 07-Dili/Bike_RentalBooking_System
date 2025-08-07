@@ -43,7 +43,7 @@ export const AuthProvider = ({ children }) => {
   const login = async (email, password) => {
     setLoading(true);
     try {
-      const res = await axios.post('http://localhost:5000/api/auth/login', {
+      const res = await axios.post('https://brbs.onrender.com/api/auth/login', {
         email,
         password,
       });

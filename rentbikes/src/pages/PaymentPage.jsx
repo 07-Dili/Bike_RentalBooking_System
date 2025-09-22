@@ -69,7 +69,7 @@ const PaymentPage = () => {
       const finalTotalCost = Math.max(1, Number(totalCost));
 
       const orderResponse = await axios.post(
-        'https://brbs.onrender.com/api/payment/create-order',
+        'https://bike-rentalbooking-system-backend.onrender.com/api/payment/create-order',
         {
           amount: finalTotalCost,
         },
@@ -92,7 +92,7 @@ const PaymentPage = () => {
         handler: async (response) => {
           try {
             const updateResponse = await axios.post(
-              'https://brbs.onrender.com/api/bookings/update-payment',
+              'https://bike-rentalbooking-system-backend.onrender.com/api/bookings/update-payment',
               {
                 bookingId: booking._id,
                 totalCost: finalTotalCost,

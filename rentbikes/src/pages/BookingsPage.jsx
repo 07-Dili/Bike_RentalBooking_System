@@ -31,7 +31,7 @@ const BookingsPage = () => {
   useEffect(() => {
     const fetchAndSetData = async () => {
       try {
-        const response = await axios.get(`https://brbs.onrender.com/api/bikes/${bikeId}`);
+        const response = await axios.get(`https://bike-rentalbooking-system-backend.onrender.com/api/bikes/${bikeId}`);
         setBikeDetails(response.data);
       } catch (error) {
         showToast('Could not load bike details. Please try again.', 'error');
@@ -103,7 +103,7 @@ const BookingsPage = () => {
 
     try {
       const response = await axios.post(
-        'https://brbs.onrender.com/api/bookings',
+        'https://bike-rentalbooking-system-backend.onrender.com/api/bookings',
         {
           bikeId: bikeId,
           from: formData.fromDate,

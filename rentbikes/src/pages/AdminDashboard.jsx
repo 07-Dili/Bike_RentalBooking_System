@@ -43,7 +43,7 @@ const AdminDashboard = () => {
   const fetchBikes = async () => {
     setLoading(true);
     try {
-      const res = await axios.get('https://brbs.onrender.com/api/bikes', {
+      const res = await axios.get('https://bike-rentalbooking-system-backend.onrender.com/api/bikes', {
         headers: { Authorization: `Bearer ${user.token}` },
       });
       setBikes(res.data);
@@ -59,7 +59,7 @@ const AdminDashboard = () => {
   const fetchBookings = async () => {
     setLoading(true);
     try {
-      const res = await axios.get('https://brbs.onrender.com/api/admin/bookings', {
+      const res = await axios.get('https://bike-rentalbooking-system-backend.onrender.com/api/admin/bookings', {
         headers: { Authorization: `Bearer ${user.token}` },
       });
       setBookings(res.data);
@@ -75,7 +75,7 @@ const AdminDashboard = () => {
   const fetchUsers = async () => {
     setLoading(true);
     try {
-      const res = await axios.get('https://brbs.onrender.com/api/admin/users', {
+      const res = await axios.get('https://bike-rentalbooking-system-backend.onrender.com/api/admin/users', {
         headers: { Authorization: `Bearer ${user.token}` },
       });
       setUsers(res.data);
@@ -112,12 +112,12 @@ const AdminDashboard = () => {
     e.preventDefault();
     try {
       if (isUpdateMode) {
-        await axios.put(`https://brbs.onrender.com/api/admin/bikes/${currentBikeId}`, formData, {
+        await axios.put(`https://bike-rentalbooking-system-backend.onrender.com/api/admin/bikes/${currentBikeId}`, formData, {
           headers: { Authorization: `Bearer ${user.token}` },
         });
         setToastData({ message: 'Bike updated successfully!', type: 'success' });
       } else {
-        await axios.post('https://brbs.onrender.com/api/admin/bikes', formData, {
+        await axios.post('https://bike-rentalbooking-system-backend.onrender.com/api/admin/bikes', formData, {
           headers: { Authorization: `Bearer ${user.token}` },
         });
         setToastData({ message: 'Bike added successfully!', type: 'success' });
@@ -136,7 +136,7 @@ const AdminDashboard = () => {
       return;
     }
     try {
-      await axios.delete(`https://brbs.onrender.com/api/admin/bikes/${bikeId}`, {
+      await axios.delete(`https://bike-rentalbooking-system-backend.onrender.com/api/admin/bikes/${bikeId}`, {
         headers: { Authorization: `Bearer ${user.token}` },
       });
       setToastData({ message: 'Bike deleted successfully!', type: 'success' });
@@ -164,7 +164,7 @@ const AdminDashboard = () => {
       return;
     }
     try {
-      await axios.put(`https://brbs.onrender.com/api/admin/bookings/${bookingId}/status`, { paymentStatus: newStatus }, {
+      await axios.put(`https://bike-rentalbooking-system-backend.onrender.com/api/admin/bookings/${bookingId}/status`, { paymentStatus: newStatus }, {
         headers: { Authorization: `Bearer ${user.token}` },
       });
       setToastData({ message: `Booking marked as ${newStatus}!`, type: 'success' });

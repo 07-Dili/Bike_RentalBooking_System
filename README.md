@@ -1,7 +1,9 @@
 # My Bike Rental Project
 
 A full-stack application for renting bikes, featuring a user-friendly front-end using react.js and a robust back-end powered by Node.js and MongoDB.
-
+Live project link : https://bike-rentalbooking-system-frontend.onrender.com
+admin email : admin@gmail.com
+admin email password : admin12345
 ### Installation
 
 To run this project locally, follow these steps:
